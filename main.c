@@ -12,13 +12,11 @@ node* create_node(int data){
     return new_node;
 }
 int main(){
-    node n1;
-    n1.data = 10;
-    n1.next = NULL;
-    printf("%d",n1.data);
-
-    node *n2; 
+    node *n1,*n2;
+    n1 = create_node(10);
     n2 = create_node(20);
+
+    printf("%d",n1->data);
     printf("\n%d",n2->data);
     return 0;
 }
