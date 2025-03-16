@@ -16,7 +16,9 @@ int main(){
     n1 = create_node(10);
     n2 = create_node(20);
 
+    n1->next = n2;
+
     printf("%d",n1->data);
-    printf("\n%d",n2->data);
+    printf("\n%d",n1->next->data);
     return 0;
 }
