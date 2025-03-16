@@ -5,6 +5,12 @@ struct node {
     struct node *next;
 };
 typedef struct node node;
+node* create_node(int data){
+    node *new_node = (node*)malloc(sizeof(node));
+    new_node->data = data;
+    new_node->next = NULL;
+    return new_node;
+}
 int main(){
     node n1;
     n1.data = 10;
@@ -12,9 +18,7 @@ int main(){
     printf("%d",n1.data);
 
     node *n2; 
-    n2 = (node*)malloc(sizeof(node));
-    n2->data = 20;
-    n2->next = NULL;
+    n2 = create_node(20);
     printf("\n%d",n2->data);
     return 0;
 }
