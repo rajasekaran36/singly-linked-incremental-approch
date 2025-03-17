@@ -20,19 +20,13 @@ void traverse(){
     }
     printf("NULL");
 }
+void insert(int data){
+    node *new_node = create_node(data);
+    head = new_node;
+}
 int main(){
     int i;
-    node *n1,*n2,*n3,*n4;
-    n1 = create_node(10);
-    n2 = create_node(20);
-    n3 = create_node(30);
-    n4 = create_node(40);
-    
-    n1->next = n2;
-    n2->next = n3;
-    n3->next = n4;
-
-    head = n1;
+    insert(10);
     traverse();
     
     return 0;
