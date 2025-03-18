@@ -22,11 +22,17 @@ void traverse(){
 }
 void insert(int data){
     node *new_node = create_node(data);
-    head = new_node;
+    if(head==NULL){
+        head = new_node;
+    }
+    else{
+        head->next = new_node;
+    }
 }
 int main(){
     int i;
     insert(10);
+    insert(20);
     traverse();
     
     return 0;
