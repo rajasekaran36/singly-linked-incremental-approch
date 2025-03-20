@@ -84,13 +84,13 @@ int size(){
     printf("\nThe size of list is %d",count);
     return count;
 }
+void delete_head(){
+    if(head==NULL){
+        printf("\nList is empty can't perform delete");
+    }
+}
 int main(){
     int i;
-    size();
-    insert(10);
-    insert(20);
-    insert_at_head(30);
-    traverse();
-    size();
+    delete_head();
     return 0;
 }
