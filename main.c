@@ -71,5 +71,7 @@ int main(){
     insert_at_head(30);
     traverse();
     search(10);
+    search(30);
+    search(20);
     return 0;
 }
