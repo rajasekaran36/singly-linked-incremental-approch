@@ -96,9 +96,9 @@ void delete_head(){
 int main(){
     int i;
     insert(10);
+    insert(20);
     traverse();
     delete_head();
     traverse();
-    delete_head();
     return 0;
 }
