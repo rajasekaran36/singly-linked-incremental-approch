@@ -107,7 +107,7 @@ void delete_tail(){
     else if(head->next==NULL){
         free(head);
         head = NULL;
-        printf("Tail Deleted");
+        printf("\nTail Deleted");
     }
     else{
         current = head;
@@ -117,7 +117,7 @@ void delete_tail(){
         node *last_node = current->next->next;
         current->next = NULL;
         free(last_node);
-        printf("Tail Deleted");
+        printf("\nTail Deleted");
     }
 }
 void insert_at(int pos, int data){
@@ -139,17 +139,25 @@ void insert_at(int pos, int data){
         current->next = new_node;
     }
 }
+void delete_at(int pos){
+    if(pos==0){
+        delete_head();
+    }
+    else if(pos>=size()){
+        delete_tail();
+    }
+}
 int main(){
     int i;
     insert(10);
     insert(20);
     insert(30);
+    insert(40);
+    insert(50);
     traverse();
-    insert_at(0,40);
+    delete_at(0);
     traverse();
-    insert_at(4,50);
-    traverse();
-    insert_at(2,100);
+    delete_at(4);
     traverse();
     return 0;
 }
