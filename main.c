@@ -45,19 +45,31 @@ void insert_at_head(int data){
         head=new_node;
     }
 }
-void search(int data){
+int search(int key){
     int index=-1;
     if(head==NULL){
         printf("The list is empty");
     }
+    else{
+        current = head;
+        while(current->next!=NULL){
+            index++;
+            if(current->data==key){
+                printf("\nElement %d found at %d",key,index);
+                break;
+            }
+            current = current->next;
+        }
+    }
+    return index;
 }
 int main(){
     int i;
     search(10);
-    //insert(10);
-    //insert(20);
-    //insert_at_head(30);
-    //traverse();
-    //search(10);
+    insert(10);
+    insert(20);
+    insert_at_head(30);
+    traverse();
+    search(10);
     return 0;
 }
