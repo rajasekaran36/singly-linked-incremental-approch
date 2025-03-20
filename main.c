@@ -100,12 +100,34 @@ void delete_head(){
         printf("Head Deleted");
     }
 }
+void delete_tail(){
+    int i;
+    if(head==NULL){
+        printf("\nList is empty can't perform delete");
+    }
+    else if(head->next==NULL){
+        free(head);
+        head = NULL;
+        printf("Tail Deleted");
+    }
+    else{
+        current = head;
+        while(current->next->next!=NULL){
+            current = current->next;
+        }
+        node *last_node = current->next->next;
+        current->next = NULL;
+        free(last_node);
+        printf("Tail Deleted");
+    }
+}
 int main(){
     int i;
     insert(10);
     insert(20);
+    insert(30);
     traverse();
-    delete_head();
+    delete_tail();
     traverse();
     return 0;
 }
