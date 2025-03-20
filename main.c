@@ -69,16 +69,23 @@ int search(int key){
     }
     return index;
 }
+int size(){
+    int count = 0;
+    if(head==NULL){
+        printf("\nList is empty");
+    }
+    else{
+
+    }
+    printf("\nThe size of list is %d",count);
+    return count;
+}
 int main(){
     int i;
-    search(10);
+    size();
     insert(10);
     insert(20);
     insert_at_head(30);
     traverse();
-    search(10);
-    search(30);
-    search(20);
-    search(40);
     return 0;
 }
