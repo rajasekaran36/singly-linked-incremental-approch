@@ -91,6 +91,9 @@ void delete_head(){
 }
 int main(){
     int i;
+    insert(10);
+    traverse();
     delete_head();
+    traverse();
     return 0;
 }
