@@ -26,9 +26,15 @@ void insert(int data){
         head = new_node;
     }
     else{
-        head->next = new_node;
+        current = head;
+        while(current->next!=NULL){
+            printf("%d->",current->data);
+            current = current->next;
+        }
+        current->next = new_node;
     }
 }
+
 int main(){
     int i;
     insert(10);
