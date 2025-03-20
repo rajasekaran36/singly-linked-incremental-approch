@@ -88,8 +88,13 @@ void delete_head(){
     if(head==NULL){
         printf("\nList is empty can't perform delete");
     }
-    else{
+    else if(head->next==NULL){
         head = NULL;
+        printf("Head Deleted");
+    }
+    else{
+        node *previous = head;
+        head = head->next;
         printf("Head Deleted");
     }
 }
