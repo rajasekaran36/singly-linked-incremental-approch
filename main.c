@@ -47,8 +47,10 @@ void insert_at_head(int data){
 }
 int search(int key){
     int index=-1;
+    int found=0;
     if(head==NULL){
         printf("The list is empty");
+        return -1;
     }
     else{
         current = head;
@@ -56,10 +58,14 @@ int search(int key){
             index++;
             if(current->data==key){
                 printf("\nElement %d found at %d",key,index);
+                found=1;
                 break;
             }
             current = current->next;
         }
+    }
+    if(found==0){
+        printf("\nElement %d is not found",key);
     }
     return index;
 }
@@ -73,5 +79,6 @@ int main(){
     search(10);
     search(30);
     search(20);
+    search(40);
     return 0;
 }
