@@ -13,12 +13,13 @@ node* create_node(int data){
     return new_node;
 }
 void traverse(){
+    printf("\n");
     current = head;
     while(current!=NULL){
         printf("%d->",current->data);
         current = current->next;
     }
-    printf("NULL");
+    printf("NULL\n");
 }
 void insert(int data){
     node *new_node = create_node(data);
@@ -44,13 +45,16 @@ void insert_at_head(int data){
         head=new_node;
     }
 }
-
+void search(int data){
+    printf("\nElement %d not found",data);
+}
 int main(){
     int i;
-    insert(10);
-    insert(20);
-    insert_at_head(30);
-    traverse();
+    search(10);
+    //insert(10);
+    //insert(20);
+    //insert_at_head(30);
+    //traverse();
     
     return 0;
 }
