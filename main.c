@@ -124,14 +124,19 @@ void insert_at(int pos, int data){
     if(pos==0){
         insert_at_head(data);
     }
+    else if(pos>=size()){
+        insert(data);
+    }
 }
 int main(){
     int i;
+    insert(10);
     insert(20);
-    insert(20);
-    insert(50);
+    insert(30);
     traverse();
     insert_at(0,40);
+    traverse();
+    insert_at(4,50);
     traverse();
     return 0;
 }
