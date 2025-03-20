@@ -46,15 +46,21 @@ void insert_at_head(int data){
     }
 }
 void search(int data){
-    printf("\nElement %d not found",data);
+    int index=-1;
+    if(head==NULL){
+        printf("The list is empty");
+    }
+    else{
+        
+    }
 }
 int main(){
     int i;
     search(10);
-    //insert(10);
-    //insert(20);
-    //insert_at_head(30);
-    //traverse();
-    
+    insert(10);
+    insert(20);
+    insert_at_head(30);
+    traverse();
+    search(10);
     return 0;
 }
