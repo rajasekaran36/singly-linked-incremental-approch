@@ -127,6 +127,17 @@ void insert_at(int pos, int data){
     else if(pos>=size()){
         insert(data);
     }
+    else{
+        int i;
+        current = head;
+        for(i=1;i<pos;i++){
+            current = current->next;
+        }
+        node *new_node = create_node(data);
+        node *previous = current;
+        new_node->next = current->next;
+        current->next = new_node;
+    }
 }
 int main(){
     int i;
@@ -137,6 +148,8 @@ int main(){
     insert_at(0,40);
     traverse();
     insert_at(4,50);
+    traverse();
+    insert_at(2,100);
     traverse();
     return 0;
 }
