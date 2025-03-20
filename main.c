@@ -87,5 +87,6 @@ int main(){
     insert(20);
     insert_at_head(30);
     traverse();
+    size();
     return 0;
 }
