@@ -50,17 +50,14 @@ void search(int data){
     if(head==NULL){
         printf("The list is empty");
     }
-    else{
-        
-    }
 }
 int main(){
     int i;
     search(10);
-    insert(10);
-    insert(20);
-    insert_at_head(30);
-    traverse();
-    search(10);
+    //insert(10);
+    //insert(20);
+    //insert_at_head(30);
+    //traverse();
+    //search(10);
     return 0;
 }
