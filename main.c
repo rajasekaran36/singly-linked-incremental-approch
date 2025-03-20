@@ -29,7 +29,6 @@ void insert(int data){
     else{
         current = head;
         while(current->next!=NULL){
-            printf("%d->",current->data);
             current = current->next;
         }
         current->next = new_node;
@@ -121,13 +120,18 @@ void delete_tail(){
         printf("Tail Deleted");
     }
 }
+void insert_at(int pos, int data){
+    if(pos==0){
+        insert_at_head(data);
+    }
+}
 int main(){
     int i;
-    insert(10);
     insert(20);
-    insert(30);
+    insert(20);
+    insert(50);
     traverse();
-    delete_tail();
+    insert_at(0,40);
     traverse();
     return 0;
 }
