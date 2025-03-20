@@ -52,7 +52,7 @@ int search(int key){
     }
     else{
         current = head;
-        while(current->next!=NULL){
+        while(current!=NULL){
             index++;
             if(current->data==key){
                 printf("\nElement %d found at %d",key,index);
