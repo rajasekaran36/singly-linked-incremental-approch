@@ -75,7 +75,11 @@ int size(){
         printf("\nList is empty");
     }
     else{
-
+        current = head;
+        while(current!=NULL){
+            count++;
+            current = current->next;
+        }
     }
     printf("\nThe size of list is %d",count);
     return count;
