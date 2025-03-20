@@ -88,6 +88,10 @@ void delete_head(){
     if(head==NULL){
         printf("\nList is empty can't perform delete");
     }
+    else{
+        head = NULL;
+        printf("Head Deleted");
+    }
 }
 int main(){
     int i;
@@ -95,5 +99,6 @@ int main(){
     traverse();
     delete_head();
     traverse();
+    delete_head();
     return 0;
 }
