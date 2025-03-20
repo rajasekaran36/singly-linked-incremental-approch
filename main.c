@@ -34,11 +34,22 @@ void insert(int data){
         current->next = new_node;
     }
 }
+void insert_at_head(int data){
+    node *new_node = create_node(data);
+    if(head==NULL){
+        head = new_node;
+    }
+    else{
+        new_node->next = head;
+        head=new_node;
+    }
+}
 
 int main(){
     int i;
     insert(10);
     insert(20);
+    insert_at_head(30);
     traverse();
     
     return 0;
