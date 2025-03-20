@@ -146,6 +146,16 @@ void delete_at(int pos){
     else if(pos>=size()){
         delete_tail();
     }
+    else{
+        int i;
+        current = head;
+        for(i=1;i<pos-1;i++){
+            current = current->next;
+        }
+        node *to_delete = current->next;
+        current->next = to_delete->next;
+        free(to_delete);
+    }
 }
 int main(){
     int i;
@@ -158,6 +168,8 @@ int main(){
     delete_at(0);
     traverse();
     delete_at(4);
+    traverse();
+    delete_at(2);
     traverse();
     return 0;
 }
