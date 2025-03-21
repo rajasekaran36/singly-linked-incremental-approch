@@ -158,18 +158,9 @@ void delete_at(int pos){
     }
 }
 int main(){
-    int i;
-    insert(10);
-    insert(20);
-    insert(30);
-    insert(40);
-    insert(50);
-    traverse();
-    delete_at(0);
-    traverse();
-    delete_at(4);
-    traverse();
-    delete_at(2);
-    traverse();
+    puts("Singly Linked List");
+    puts("-------------------");
+    printf("\n1.Insert\n2.Delete\n3.Traversal\n4.Search\n5.Size");
+    
     return 0;
 }
